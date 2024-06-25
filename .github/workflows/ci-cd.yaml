@@ -34,7 +34,7 @@ jobs:
 
       - name: Deploy to Elastic Beanstalk
         run: |
-          aws elasticbeanstalk update-environment --application-name myblog-v1 \
-            --environment-name Myblog-v1-env-2 \
+          aws elasticbeanstalk update-environment --application-name "myblog-v1" \
+            --environment-name "Myblog-v1-env-2" \
             --version-label ${{ github.sha }} \
             --source-bundle S3Bucket="elasticbeanstalk-us-east-2-010430189416",S3Key="${{ github.sha }}.jar"
