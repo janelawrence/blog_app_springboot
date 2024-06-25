@@ -20,6 +20,10 @@ jobs:
 
       - name: Build with Maven
         run: mvn clean install
+        env:
+          DATABASE_PASSWORD: ${{ secrets.DATABASE_PASSWORD }}
+          DATABASE_USERNAME: ${{ secrets.DATABASE_USERNAME }}
+          DATABASE_URL: ${{ secrets.DATABASE_URL }}
 
       - name: Configure AWS credentials
         uses: aws-actions/configure-aws-credentials@v4

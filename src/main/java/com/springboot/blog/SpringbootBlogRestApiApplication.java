@@ -21,21 +21,19 @@ import org.springframework.context.annotation.Bean;
                 description = "Blog App REST APIs Documentation",
                 version = "v1.0",
                 contact = @Contact(
-                        name = "Jane",
-                        email = "jane@gmail.com",
-                        url = "https://jane.net"
+                        name = "Jane Zhang",
+                        email = "zhang2752@wisc.edu",
+                        url = "zhang2752@wisc.edu"
                 ),
                 license = @License(
                         name = "Apache 2.0",
                         url = "https://www.javaguides.net/license"
                 )
-        ),
-        externalDocs = @ExternalDocumentation(
-                description = "Spring Boot Blog App Documentation",
-                url = "someGithublink"
         )
+
 )
-public class SpringbootBlogRestApiApplication implements CommandLineRunner {
+//public class SpringbootBlogRestApiApplication implements CommandLineRunner {
+public class SpringbootBlogRestApiApplication {
 
     @Bean
     public ModelMapper modelMapper() {
@@ -49,15 +47,15 @@ public class SpringbootBlogRestApiApplication implements CommandLineRunner {
     @Autowired
     private RoleRepository roleRepository;
 
-    @Override
-    public void run(String... args) throws Exception {
-        Role adminRole = new Role();
-        adminRole.setName("ROLE_ADMIN");
-        roleRepository.save(adminRole);
-
-        Role userRole = new Role();
-        userRole.setName("ROLE_USER");
-        roleRepository.save(userRole);
-
-    }
+//    @Override
+//    public void run(String... args) throws Exception {
+//        Role adminRole = new Role();
+//        adminRole.setName("ROLE_ADMIN");
+//        roleRepository.save(adminRole);
+//
+//        Role userRole = new Role();
+//        userRole.setName("ROLE_USER");
+//        roleRepository.save(userRole);
+//
+//    }
 }
