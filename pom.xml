@@ -124,7 +124,7 @@
                 <version>${spring-boot.version}</version>
                 <configuration>
                     <mainClass>com.springboot.blog.SpringbootBlogRestApiApplication</mainClass>
-                    <skip>true</skip>
+                    <skip>false</skip>
                 </configuration>
                 <executions>
                     <execution>
