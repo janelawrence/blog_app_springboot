@@ -15,14 +15,14 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 @Service
-public class CategoryImpl implements CategoryService {
+public class CategoryServiceImpl implements CategoryService {
 
     private CategoryRepository categoryRepository;
     private ModelMapper mapper;
 
 
-    public CategoryImpl(CategoryRepository categoryRepository,
-                        ModelMapper mapper) {
+    public CategoryServiceImpl(CategoryRepository categoryRepository,
+                               ModelMapper mapper) {
         this.categoryRepository = categoryRepository;
         this.mapper = mapper;
     }
